@@ -1,0 +1,117 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+.services-title{
+    position: relative;
+}
+
+.services-title h1{
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.services-format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #e4e4e4; /* Subtle border */
+    transition: 0.3s ease-in-out; /* Smooth transition */
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.services-format h3{
+    font-size: 28px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.services-format h2{
+    font-size: 38px;
+    font-weight: 800;
+    background: linear-gradient(270deg , #df8908 50%, #b415ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Makes the grid responsive */
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.services-format p{
+    color: rgb(45, 45, 45);
+    font-size: 22px; /* Slightly smaller font size */
+    line-height: 32px; /* Reduced line height for better readability */
+    max-width: 300px;
+    margin: 0 auto; /* Centers the text */
+}
+
+.services-readmore{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+    color: #ff00ff; /* Color for the "Read More" */
+    font-weight: 500;
+}
+
+.services-format:hover {
+    border: 2px solid #ff00ff;  /* Border color stays the same */
+    background-image: linear-gradient(45deg, #f1874a, #00ffd5);  /* Updated gradient colors */
+    transform: scale(1.05);  /* Slightly scale the card */
+    transition: 0.4s ease-in-out;  /* Smooth transition */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Darker shadow with increased blur */
+}
+
+
+.services-format h3:hover {
+    color: #ff00ff; /* Hover effect for titles */
+}
+
+.services-format p:hover {
+    color: #df8908; /* Slight text color change on hover */
+}
+
+@media (max-width: 768px) {
+    .services {
+        align-items: start;
+        gap: 70px;
+        margin: 20px 6%;
+    }
+    .title-box h1 {
+        padding: 0;
+        font-size: 40px;
+    }
+    .services-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .services-format {
+        gap: 10px;
+        padding: 20px;
+    }
+    .services-format h2 {
+        font-size: 20px;
+    }
+    .services-format p {
+        font-size: 16px;
+        line-height: 26px;
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,139 @@
+.profileimg {
+    margin-left: -120px;
+    width: 250px;
+    max-height: 100vh;
+    border-radius: 60%; 
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+.nav-menu li a {
+    text-decoration: none; 
+    color: inherit;        
+    font-size: inherit;    
+    position: relative;   
+    transition: color 0.3s ease-in-out; 
+}
+
+.nav-menu li a:hover {
+    color: #b923e1; /* Change text color on hover */
+}
+
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-menu li a:hover::after {
+    width: 100%; /* Expand the underline on hover */
+}
+
+
+.nav-connect {
+    margin-right: -105px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.nav-connect a {
+   text-decoration: none;
+   color: white;
+}
+
+.nav-connect1 {
+    margin-right: -115px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.nav-connect:hover {
+    transform: scale(1.05);
+}
+.nav-connect1:hover {
+    transform: scale(1.05);
+}
+.anchor-link{
+    text-decoration: none;
+    color: white;
+}
+.nav-mob-open {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+}
+.nav-mob-close {
+    display: none;
+    cursor: pointer;
+}
+@media screen and (max-width:768px){
+    .navbar {
+        margin: 20px 6%;
+    }
+    .profileimg{
+        display: block;
+        position: absolute;
+        left: 110px;
+        margin-top: 20px;
+    }
+    .nav-mob-open {
+        display: block;
+        position: absolute;
+        right: 15px;
+        margin-top: 20px;
+    }
+    .navbar ul {
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1f0016;
+        width: 300px;
+        height: 100%;
+        z-index: 2;
+        transition: right .5s;
+        right: -300px;
+        padding-top: 100px;
+    }
+    .nav-menu li {
+        font-size: 22px;
+        padding-left: 50px;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .nav-mob-close {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 7%;
+        width: 30px;
+    }
+    .nav-connect {
+        display: none;
+    }
+    .nav-connect1{
+        display: none;
+    }
+}
